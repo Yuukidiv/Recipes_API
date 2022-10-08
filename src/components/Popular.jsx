@@ -10,7 +10,8 @@ useEffect(() => {
 Its just a condition we are putting to reload the useEffect */
 
   const popularGet = async () => {
-    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.RECIPESS_API}&number=9`);
+    // MAKE SURE THE API IS CALLED REACT_APP_SOMETHING because if not it will not work
+    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPESS_API}&number=9`);
     const data = await api.json();
     console.log(data);
   };
