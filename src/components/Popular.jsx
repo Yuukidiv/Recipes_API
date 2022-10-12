@@ -41,7 +41,7 @@ Its just a condition we are putting to reload the useEffect */
         <Splide 
           options={{
             pagination: false,
-            perPage: 4,
+            perPage: 3,
             drag: "free",
             gap: '2rem'
 
