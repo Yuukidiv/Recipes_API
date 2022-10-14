@@ -7,11 +7,11 @@ import { NavLink } from "react-router-dom"
 function Categories() {
   return (
     <Navbar>
-      <NavLink>
+      <NavLink to={"/cuisine/american"}>
       <FaHamburger />
         <h4>American Food</h4>
       </NavLink>
-      <NavLink>
+      <NavLink to={"/cuisine/japanese"}>
         <GiSushis />
         <h4>Japanese</h4>
       </NavLink>

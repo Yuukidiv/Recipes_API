@@ -5,7 +5,6 @@ import Categories from '../components/Categories'
 function Home() {
   return (
     <div> 
-      <Categories />
       <Popular />
       <Veggie />
     </div>

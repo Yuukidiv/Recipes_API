@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Home'
+import Cuisine from './Cuisine'
 // making the routing (changing the route with the path we choose to render)
 import {Route, Routes } from 'react-router-dom'
 function Pages() {
@@ -7,6 +8,7 @@ function Pages() {
   return (
     <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/cuisine/:type" element={<Cuisine />}/>
     </Routes>
     )
 }
