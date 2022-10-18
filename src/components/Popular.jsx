@@ -5,6 +5,7 @@ import styled from "styled-components";
 // splide does the carousel and splide slide select each image as the card
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import { Link } from "react-router-dom";
 
 function Popular() {
 // We create a variable that is responsive with the UI setPopular is like the function that modifies popular
@@ -50,8 +51,10 @@ Its just a condition we are putting to reload the useEffect */
           return (
             <SplideSlide key={recipe.id}>
               <Cards>
+                <Link to={"/description/" + recipe.id}>
                 <p>{recipe.title}</p>
                 <img src={recipe.image} alt={recipe.title} />
+                </Link>
               </Cards>
             </SplideSlide>
           )

@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './Home'
 import Cuisine from './Cuisine'
 import SearchItems from './SearchItems'
+import Description from './Description'
 // making the routing (changing the route with the path we choose to render)
 import {Route, Routes } from 'react-router-dom'
 function Pages() {
@@ -11,6 +12,7 @@ function Pages() {
         <Route path="/" element={<Home />}/>
         <Route path="/cuisine/:type" element={<Cuisine />}/>
         <Route path="/search/:search" element ={<SearchItems />}/>
+        <Route path="/description/:name" element ={<Description />}/>
     </Routes>
     )
 }
