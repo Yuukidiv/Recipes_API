@@ -24,8 +24,10 @@ function Cuisine() {
         {cuisine.map((item) => {
             return (
             <Card key={item.id}>
+                <Link to={"/description/" + item.id}>
                 <img src={item.image} alt="" />
                 <h4>{item.title}</h4>
+                </Link>
             </Card>
             )
         })}
@@ -49,6 +51,8 @@ const Card = styled.div`
     h4 {
         text-align: center;
         padding: 1rem;
+        text-decoration: none;
+        color: black;
     }
 `
 

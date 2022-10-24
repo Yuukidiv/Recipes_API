@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 function SearchItems() {
     const [searchRecipes, setSearchRecipes] = useState([]);
     let params = useParams();
@@ -20,8 +20,10 @@ function SearchItems() {
     {searchRecipes.map((item) => {
         return (
         <Card key={item.id}>
+            <Link to={"/description/" + item.id}>
             <img src={item.image} alt="" />
             <h4>{item.title}</h4>
+            </Link>
         </Card>
         )
     })}
@@ -45,6 +47,7 @@ a {
 h4 {
     text-align: center;
     padding: 1rem;
+    color: black;
 }
 `
 
